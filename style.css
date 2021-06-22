@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: white;
+}
+h1 {
+  color: #1fbbee;
+  text-align: center;
+}
+i,
+svg {
+  pointer-events: none;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad,
+.crash-pad {
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad,
+.crash-pad {
+  background: #00b4f5;
+}
+
+.kick-pad.active,
+.hihat-pad.active
+ {
+  background: rgb(231, 59, 59);
+}
+.snare-pad.active,
+.crash-pad.active {
+  background: rgb(82, 218, 58);
+}
+
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hihat-track,
+.snare-track,
+.kick-track,
+.crash-track {
+  display: flex;
+  align-items: center;
+  width:55%;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.kick,
+.snare,
+.hihat,
+.crash {
+  display: flex;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+}
+.controls button {
+  padding: 1rem;
+
+  background: black;
+  color: #1fbbee;
+  border-style: solid;
+  border-color: #1fbbee;
+  border-width: 4px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.pad {
+  transition: all 0.5s ease;
+  border-radius: 50px;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background: black;
+  color: #1fbbee;
+  cursor: pointer;
+  margin-top: 3rem;
+  border-style: solid;
+  border-color: #1fbbee;
+  border-width: 4px;
+  border-radius: 10px;
+}
+
+select {
+  text-align: center;
+  width: 200px;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: black;
+  color: #1fbbee;
+  border-style: solid;
+  border-color: #1fbbee;
+  border-width: 4px;
+  border-radius: 10px;
+}
+.mute.active {
+  background: rgb(182, 182, 182);
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  color: #1fbbee;
+  cursor: pointer;
+  border-radius: 1rem;
+  background-color: black;
+}
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
